@@ -38,9 +38,21 @@ h1 {
 }
 
 h2 {
+  position: relative;
   margin-top: 100px;
   margin-bottom: 36px;
   font-size: 32px;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: #38bdf8;
+  left: 0;
+  bottom: -10px;
+  border-radius: 2px;
 }
 
 h3 {
@@ -63,13 +75,21 @@ p {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  border: 3px solid #38bdf8;
+  border: 4px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #38bdf8, #7c3aed);
   object-fit: cover;
   background: #020617;
+  transition: transform 0.4s ease;
+}
+
+.hero img:hover {
+  transform: scale(1.05);
 }
 
 .hero-text {
   max-width: 820px;
+  animation: fadeInUp 1s ease forwards;
 }
 
 .hero span {
@@ -90,12 +110,22 @@ p {
   color: #020617;
   font-weight: 600;
   text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta a:hover {
+  background: #7c3aed;
 }
 
 .cta a.secondary {
   background: transparent;
   border: 1px solid #38bdf8;
   color: #38bdf8;
+}
+
+.cta a.secondary:hover {
+  color: #7c3aed;
+  border-color: #7c3aed;
 }
 
 .section-box {
@@ -117,12 +147,15 @@ p {
   border-radius: 18px;
   padding: 30px;
   border: 1px solid #1e293b;
-  transition: transform .2s, border .2s;
+  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  border-color: #38bdf8;
+  transform: translateY(-10px);
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #38bdf8, #7c3aed);
+  border-width: 2px;
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
 }
 
 .tags {
@@ -138,10 +171,16 @@ p {
 }
 
 .skills-box {
-  background: #020617;
+  background: linear-gradient(135deg, #0b1120, #020617);
   border: 1px solid #1e293b;
   border-radius: 16px;
   padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
 }
 
 .footer {
@@ -149,6 +188,21 @@ p {
   border-top: 1px solid #1e293b;
   padding-top: 36px;
   color: #94a3b8;
+}
+
+.footer p a {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer p a:hover {
+  color: #7c3aed;
+}
+
+@keyframes fadeInUp {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
 }
 </style>
 </head>
@@ -186,15 +240,45 @@ p {
 
 <!-- EXPERIENCE -->
 <h2>Experience</h2>
+
 <div class="section-box">
-  <h3>Independent Data Scientist (Remote)</h3>
-  <p class="tags">Analytics • Machine Learning • Business Intelligence</p>
-  <p>
-    Designed and delivered multiple end-to-end data science and analytics projects
-    using real-world datasets. Worked across data extraction, cleaning,
-    feature engineering, modeling, visualization, and insight communication.
-    Experience collaborating asynchronously using GitHub and documentation-first workflows.
-  </p>
+  <h3>Freelance Data Analyst (Upwork & Fiverr)</h3>
+  <p class="tags">Power BI • SQL • Python • Analytics</p>
+  <ul>
+    <li>Worked on two major freelance projects, delivering dashboards, ETL pipelines, and analytics solutions.</li>
+    <li>Executed end-to-end data analysis, reporting, and automation for multiple clients.</li>
+  </ul>
+</div>
+
+<div class="section-box">
+  <h3>Data Analyst (Contract) – Media Studio, Nigeria</h3>
+  <p class="tags">Power BI • Reporting Automation • Marketing Analytics</p>
+  <ul>
+    <li>Automated marketing ROI dashboards in Power BI.</li>
+    <li>Consolidated scattered campaign data into a centralized reporting system.</li>
+    <li>Reduced reporting time by 70% through automation and optimized workflows.</li>
+  </ul>
+</div>
+
+<div class="section-box">
+  <h3>Hackathon Experience</h3>
+  <p class="tags">10Alytics Hackathon – Fiscal Unraveling Africa’s Sovereign Debt Crisis</p>
+  <ul>
+    <li>Built fiscal risk models, debt sustainability indicators, and sovereign risk classifications.</li>
+    <li>Developed dashboards to track deficit trends, refinancing exposure, and debt trajectory.</li>
+  </ul>
+</div>
+
+<!-- KEY ACHIEVEMENTS -->
+<h2>Key Achievements</h2>
+<div class="section-box">
+  <ul>
+    <li>Reduced ETL processing time by 60%.</li>
+    <li>Improved marketing reporting efficiency by 70%.</li>
+    <li>Built forecasting models with 75–85% accuracy.</li>
+    <li>Delivered 30+ freelance projects with strong client satisfaction.</li>
+    <li>Mentored junior analysts in SQL, Power BI, and data engineering.</li>
+  </ul>
 </div>
 
 <!-- PROJECTS -->
@@ -239,38 +323,33 @@ p {
 
 </section>
 
-<!-- SKILLS -->
-<h2>Technical Skills</h2>
+<!-- TECHNICAL SKILLS -->
+<h2>Core Skills</h2>
 <div class="skills-grid">
 
 <div class="skills-box">
-<b>Programming & Querying</b><br>
-Python, SQL
+<b>Databases & ETL</b><br>
+SQL, PostgreSQL, schema design, tuning, ETL, data modeling, pipeline automation
 </div>
 
 <div class="skills-box">
-<b>Data Science & Machine Learning</b><br>
-Pandas, NumPy, Scikit-learn, Feature Engineering, Predictive Modeling, Churn & CLV Analysis
+<b>Programming & Analytics</b><br>
+Python, Pandas, NumPy, Scikit-Learn, APIs, Forecasting, Churn & LTV Models, Anomaly Detection
 </div>
 
 <div class="skills-box">
-<b>Cloud, Web3 & Big Data</b><br>
-BigQuery, Cloud Cost Analytics, On-chain Data Analysis, Web3 Data Exploration
+<b>BI & Visualization</b><br>
+Power BI, DAX, Excel Power Query
 </div>
 
 <div class="skills-box">
-<b>Business Intelligence</b><br>
-Power BI, Excel, Power Query, Power Pivot, DAX, KPI & Executive Dashboards
+<b>Cloud & Big Data</b><br>
+AWS, GCP, BigQuery, Snowflake, Web3 Data Analysis
 </div>
 
 <div class="skills-box">
-<b>Data Engineering & DevOps</b><br>
-Docker, Git, GitHub, Data Validation Pipelines
-</div>
-
-<div class="skills-box">
-<b>Remote Work & Collaboration</b><br>
-Asynchronous Workflows, Documentation, Version Control, Stakeholder Communication
+<b>Soft Skills</b><br>
+Analytical Thinking, Problem Solving, Communication, Stakeholder Engagement, Curiosity, Collaboration, Attention to Detail
 </div>
 
 </div>
@@ -278,16 +357,16 @@ Asynchronous Workflows, Documentation, Version Control, Stakeholder Communicatio
 <!-- EDUCATION -->
 <h2>Education</h2>
 <div class="section-box">
-  <p><b>Bachelor’s Degree</b><br>
+  <p><b>B.Sc. Statistics</b><br>
   Akwa Ibom State University</p>
   <p><b>Relevant Coursework:</b> Statistics, Data Analysis, Database Management, Programming Fundamentals</p>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-  <p>Email: mondayimeobong@gmail.com</p>
-  <p>GitHub: github.com/ImeMonday</p>
-  <p>Remote Data Roles</p>
+  <p>Email: <a href="mailto:mondayimeobong@gmail.com">mondayimeobong@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/ImeMonday" target="_blank">github.com/ImeMonday</a></p>
+  <p>Open to Remote Data Roles</p>
 </div>
 
 </div>
