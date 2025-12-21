@@ -6,17 +6,9 @@
 
 <title>Imeobong Monday | Data Scientist | Analytics • ML • BI</title>
 
-<meta name="description" content="Imeobong Monday is a Data Scientist experienced in SQL, Python, BigQuery, Power BI, Docker, Web3 analytics, and remote-first data work. Portfolio features churn modeling, cloud cost analysis, job market analytics, and executive dashboards.">
-
-<meta name="keywords" content="Data Scientist, Data Analyst, Analytics Engineer, SQL, Python, BigQuery, Power BI, Docker, Web3 Analytics, Machine Learning, Remote Data Jobs">
-
+<meta name="description" content="Imeobong Monday is a Data Scientist experienced in SQL, Python, BigQuery, Power BI, Looker Studio, Docker, and remote-first analytics work.">
+<meta name="keywords" content="Data Scientist, Data Analyst, SQL, Python, Power BI, Looker Studio, BigQuery, Machine Learning">
 <meta name="author" content="Imeobong Monday">
-
-<meta property="og:title" content="Imeobong Monday | Data Scientist Portfolio">
-<meta property="og:description" content="End-to-end data science and analytics projects built for real business impact.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://ImeMonday.github.io">
-<meta property="og:image" content="https://ImeMonday.github.io/profile.jpg">
 
 <style>
 body {
@@ -32,18 +24,13 @@ body {
   padding: 90px 20px;
 }
 
-h1 {
-  font-size: 46px;
-  margin-bottom: 14px;
-}
-
+h1 { font-size: 46px; margin-bottom: 14px; }
 h2 {
-  position: relative;
   margin-top: 100px;
   margin-bottom: 36px;
   font-size: 32px;
+  position: relative;
 }
-
 h2::after {
   content: "";
   position: absolute;
@@ -52,17 +39,9 @@ h2::after {
   background: #38bdf8;
   left: 0;
   bottom: -10px;
-  border-radius: 2px;
 }
 
-h3 {
-  margin-top: 0;
-}
-
-p {
-  color: #cbd5f5;
-  line-height: 1.85;
-}
+p { color: #cbd5f5; line-height: 1.85; }
 
 .hero {
   display: flex;
@@ -70,35 +49,27 @@ p {
   align-items: center;
   flex-wrap: wrap;
 }
-
 .hero img {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  border: 4px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(45deg, #38bdf8, #7c3aed);
-  object-fit: cover;
-  background: #020617;
-  transition: transform 0.4s ease;
+  border: 4px solid transparent;
+  background: linear-gradient(#020617, #020617) padding-box,
+              linear-gradient(45deg, #38bdf8, #7c3aed) border-box;
 }
 
-.hero img:hover {
-  transform: scale(1.05);
+.hero-text,
+.section-box,
+.card,
+.skills-box {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.hero-text {
-  max-width: 820px;
-  animation: fadeInUp 1s ease forwards;
-}
-
-.hero span {
-  color: #38bdf8;
-  font-weight: 600;
-}
-
-.cta {
-  margin-top: 28px;
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .cta a {
@@ -110,22 +81,11 @@ p {
   color: #020617;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.3s ease;
 }
-
-.cta a:hover {
-  background: #7c3aed;
-}
-
 .cta a.secondary {
   background: transparent;
   border: 1px solid #38bdf8;
   color: #38bdf8;
-}
-
-.cta a.secondary:hover {
-  color: #7c3aed;
-  border-color: #7c3aed;
 }
 
 .section-box {
@@ -142,26 +102,25 @@ p {
   gap: 28px;
 }
 
+.project-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .card {
   background: #020617;
   border-radius: 18px;
   padding: 30px;
   border: 1px solid #1e293b;
-  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover {
-  transform: translateY(-10px);
-  border-image-slice: 1;
-  border-image-source: linear-gradient(45deg, #38bdf8, #7c3aed);
-  border-width: 2px;
-  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+  transform: translateY(-8px);
+  border-color: #38bdf8;
 }
 
 .tags {
   font-size: 13px;
   color: #94a3b8;
-  margin-bottom: 14px;
 }
 
 .skills-grid {
@@ -175,12 +134,6 @@ p {
   border: 1px solid #1e293b;
   border-radius: 16px;
   padding: 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skills-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
 }
 
 .footer {
@@ -189,20 +142,9 @@ p {
   padding-top: 36px;
   color: #94a3b8;
 }
-
-.footer p a {
+.footer a {
   color: #38bdf8;
   text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer p a:hover {
-  color: #7c3aed;
-}
-
-@keyframes fadeInUp {
-  0% {opacity: 0; transform: translateY(20px);}
-  100% {opacity: 1; transform: translateY(0);}
 }
 </style>
 </head>
@@ -210,27 +152,12 @@ p {
 <body>
 <div class="container">
 
-<!-- HERO -->
 <section class="hero">
-  <img src="profile.jpg" alt="Imeobong Monday">
+  <img src="profile.jpg" alt="Imeobong Monday profile photo">
   <div class="hero-text">
     <h1>Imeobong Monday</h1>
-
-    <p>
-      <span>Data Scientist</span> with strong hands-on experience delivering
-      analytics, machine learning, and business intelligence solutions in
-      remote-first environments. Skilled in turning complex datasets into
-      insights that support revenue growth, cost optimization, and product decisions.
-    </p>
-
-    <p>
-      Project experience spans customer churn and lifetime value modeling,
-      cloud cost and resource utilization analysis, AI-driven job market intelligence,
-      Web3 and on-chain data exploration, automated reporting pipelines,
-      and executive-ready dashboards using SQL, Python, BigQuery, Docker,
-      Excel Power tools, and Power BI.
-    </p>
-
+    <p><strong>Data Scientist</strong> delivering analytics, machine learning, and BI solutions for business impact.</p>
+    <p>Experience spans churn modeling, cloud cost analytics, AI-driven job market analysis, and executive dashboards using SQL, Python, Power BI, and Looker Studio.</p>
     <div class="cta">
       <a href="resume.pdf" target="_blank">Download Resume</a>
       <a href="https://github.com/ImeMonday" target="_blank" class="secondary">GitHub</a>
@@ -238,137 +165,74 @@ p {
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<h2>Experience</h2>
-
-<div class="section-box">
-  <h3>Freelance Data Analyst (Upwork & Fiverr)</h3>
-  <p class="tags">Power BI • SQL • Python • Analytics</p>
-  <ul>
-    <li>Worked on two major freelance projects, delivering dashboards, ETL pipelines, and analytics solutions.</li>
-    <li>Executed end-to-end data analysis, reporting, and automation for multiple clients.</li>
-  </ul>
-</div>
-
-<div class="section-box">
-  <h3>Data Analyst (Contract) – Media Studio, Nigeria</h3>
-  <p class="tags">Power BI • Reporting Automation • Marketing Analytics</p>
-  <ul>
-    <li>Automated marketing ROI dashboards in Power BI.</li>
-    <li>Consolidated scattered campaign data into a centralized reporting system.</li>
-    <li>Reduced reporting time by 70% through automation and optimized workflows.</li>
-  </ul>
-</div>
-
-<div class="section-box">
-  <h3>Hackathon Experience</h3>
-  <p class="tags">10Alytics Hackathon – Fiscal Unraveling Africa’s Sovereign Debt Crisis</p>
-  <ul>
-    <li>Built fiscal risk models, debt sustainability indicators, and sovereign risk classifications.</li>
-    <li>Developed dashboards to track deficit trends, refinancing exposure, and debt trajectory.</li>
-  </ul>
-</div>
-
-<!-- KEY ACHIEVEMENTS -->
-<h2>Key Achievements</h2>
-<div class="section-box">
-  <ul>
-    <li>Reduced ETL processing time by 60%.</li>
-    <li>Improved marketing reporting efficiency by 70%.</li>
-    <li>Built forecasting models with 75–85% accuracy.</li>
-    <li>Delivered 30+ freelance projects with strong client satisfaction.</li>
-    <li>Mentored junior analysts in SQL, Power BI, and data engineering.</li>
-  </ul>
-</div>
-
-<!-- PROJECTS -->
 <h2>Featured Projects</h2>
 <section class="projects">
 
-<div class="card">
-  <h3>Ecommerce Sales & Customer Insights Dashboard</h3>
-  <p class="tags">SQL • Python • Power BI • BigQuery</p>
-  <p>Customer segmentation, revenue analysis, and KPI dashboards built on large transactional datasets.</p>
-</div>
+<a class="project-link" href="https://github.com/ImeMonday/Springer-Capital-Referral-Validation-Pipeline" target="_blank">
+  <div class="card">
+    <h3>Referral Validation & Data Quality Pipeline</h3>
+    <p class="tags">Python • Docker</p>
+    <p>Rule-based validation pipeline packaged for reproducible execution.</p>
+  </div>
+</a>
 
-<div class="card">
-  <h3>Telco Customer Churn & Lifetime Value Modeling</h3>
-  <p class="tags">Python • SQL • Machine Learning</p>
-  <p>Churn prediction and lifetime value modeling to support retention strategy.</p>
-</div>
+<a class="project-link" href="https://github.com/ImeMonday/Telco-Customer-Churn-Analysis" target="_blank">
+  <div class="card">
+    <h3>Telco Customer Churn Analysis</h3>
+    <p class="tags">Python • SQL • ML</p>
+    <p>Churn prediction and customer lifetime value modeling.</p>
+  </div>
+</a>
 
-<div class="card">
-  <h3>AI-Powered Job Market Analysis</h3>
-  <p class="tags">Python • NLP • Analytics</p>
-  <p>Job posting analysis to identify skill demand, role trends, and hiring signals.</p>
-</div>
+<a class="project-link" href="https://github.com/ImeMonday/AI-Enhanced-Job-Market-Analytics-in-Python-and-Power-BI" target="_blank">
+  <div class="card">
+    <h3>AI-Enhanced Job Market Analytics</h3>
+    <p class="tags">Python • NLP • Power BI</p>
+    <p>Skill demand and role trend analysis from job postings.</p>
+  </div>
+</a>
 
-<div class="card">
-  <h3>Cloud Cost & Resource Utilization Analysis</h3>
-  <p class="tags">SQL • BigQuery • Cost Analytics</p>
-  <p>Cloud billing analysis highlighting inefficiencies and optimization opportunities.</p>
-</div>
-
-<div class="card">
-  <h3>Automated Retail Performance Dashboard</h3>
-  <p class="tags">Excel • Power Query • Power Pivot • DAX</p>
-  <p>Automated dashboards with clean data models and refresh-ready pipelines.</p>
-</div>
-
-<div class="card">
-  <h3>Referral Validation & Data Quality Pipeline</h3>
-  <p class="tags">Python • Docker • Data Validation</p>
-  <p>Rule-based validation pipeline packaged with Docker for reproducible execution.</p>
-</div>
+<a class="project-link" href="https://github.com/ImeMonday/Cloud-Cost-Resource-Utilization-Analysis" target="_blank">
+  <div class="card">
+    <h3>Cloud Cost & Resource Utilization</h3>
+    <p class="tags">SQL • BigQuery</p>
+    <p>Cloud billing optimization and resource efficiency analysis.</p>
+  </div>
+</a>
 
 </section>
 
-<!-- TECHNICAL SKILLS -->
 <h2>Core Skills</h2>
 <div class="skills-grid">
-
-<div class="skills-box">
-<b>Databases & ETL</b><br>
-SQL, PostgreSQL, schema design, tuning, ETL, data modeling, pipeline automation
+  <div class="skills-box"><b>Programming</b><br>Python, SQL, Pandas, Scikit-Learn</div>
+  <div class="skills-box"><b>BI & Dashboards</b><br>Power BI, DAX, Excel Power Query, Looker Studio</div>
+  <div class="skills-box"><b>Cloud</b><br>BigQuery, GCP, AWS</div>
 </div>
 
-<div class="skills-box">
-<b>Programming & Analytics</b><br>
-Python, Pandas, NumPy, Scikit-Learn, APIs, Forecasting, Churn & LTV Models, Anomaly Detection
-</div>
-
-<div class="skills-box">
-<b>BI & Visualization</b><br>
-Power BI, DAX, Excel Power Query
-</div>
-
-<div class="skills-box">
-<b>Cloud & Big Data</b><br>
-AWS, GCP, BigQuery, Snowflake, Web3 Data Analysis
-</div>
-
-<div class="skills-box">
-<b>Soft Skills</b><br>
-Analytical Thinking, Problem Solving, Communication, Stakeholder Engagement, Curiosity, Collaboration, Attention to Detail
-</div>
-
-</div>
-
-<!-- EDUCATION -->
 <h2>Education</h2>
 <div class="section-box">
-  <p><b>B.Sc. Statistics</b><br>
-  Akwa Ibom State University</p>
-  <p><b>Relevant Coursework:</b> Statistics, Data Analysis, Database Management, Programming Fundamentals</p>
+  <p><b>B.Sc. Statistics</b><br>Akwa Ibom State University</p>
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
   <p>Email: <a href="mailto:mondayimeobong@gmail.com">mondayimeobong@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/ImeMonday" target="_blank">github.com/ImeMonday</a></p>
-  <p>Nigeria • Open to Remote Data Roles</p>
+  <p>GitHub: <a href="https://github.com/ImeMonday">github.com/ImeMonday</a></p>
+  <p>X: <a href="https://x.com/Tommonday487298" target="_blank">@Tommonday487298</a></p>
+  <p>Open to Remote Data Roles</p>
 </div>
 
 </div>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("visible");
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll(".hero-text, .section-box, .card, .skills-box")
+  .forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>
